@@ -9,7 +9,7 @@ def fetch() -> dict:
     """Fetch the full summary JSON from the Anthropic status page."""
     req = urllib.request.Request(
         STATUS_API,
-        headers={"User-Agent": "claude-status-monitor/1.0"},
+        headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"},
     )
     with urllib.request.urlopen(req, timeout=15) as resp:
         return json.loads(resp.read().decode())
